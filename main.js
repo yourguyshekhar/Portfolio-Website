@@ -8,7 +8,11 @@ menuToggle.addEventListener('click', () => {
 
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    const icon = darkModeToggle.querySelector('i');
+    icon.classList.toggle('bx-sun');
+    icon.classList.toggle('bx-moon');
 });
+
 function toggleCopyright() {
     const copyrightContent = document.querySelector('.copyright-content');
     if (copyrightContent.style.maxHeight === '0px' || copyrightContent.style.maxHeight === '') {
